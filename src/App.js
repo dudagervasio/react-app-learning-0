@@ -10,6 +10,9 @@ function App() {
 
 	return (
 		<div className="App">
+			<div className="header">
+				TODO´s APP
+			</div>
 			<AddTodo
 				todos={todos}
 				setTodos={setTodos}

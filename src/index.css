@@ -27,6 +27,12 @@ code {
 
 }
 
+div .header {
+	margin: 10px;
+	color: cadetblue;
+	font-size: 2rem;
+}
+
 .todos-container {
 	width: 90%;
 	display: flex;
