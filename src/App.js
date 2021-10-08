@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
+import { Todos } from './components/Todos';
+import { AddTodo } from './components/AddTodo';
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+	const [ todos, setTodos ] = useState([]);
+
+	return (
+		<div className="App">
+			<AddTodo
+				todos={todos}
+				setTodos={setTodos}
+			 />
+			<div className="todos-container">
+				<Todos
+					todos={todos}
+					setTodos={setTodos}
+				/>
+			</div>
+		</div>
+	);
 }
 
 export default App;
